@@ -1,0 +1,91 @@
+/*common*/
+header {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+ }
+
+h1 {
+   text-align: center;
+   margin: 60px auto; 
+}
+ 
+h2 {
+    font-weight: normal;
+    font-size: 20px;
+}
+  
+p {
+    line-height: 1.8; 
+}
+
+/*header*/
+
+/*body*/
+body {
+  background-color: #486d46;            /* 背景色 */
+  background-image: url(img/thought-catalog-o0Qqw21-0NI-unsplash.jpg); /* 画像 */
+  background-size: cover;               /* 全画面 */
+  background-attachment: fixed;         /* 固定 */
+  background-position: center center;   /* 縦横中央 */
+  background-color:rgba(255,255,255,0.5); 
+  background-blend-mode:lighten;
+}
+   @media (min-width: 640px) {
+      body {
+         background-image: url(img/thought-catalog-o0Qqw21-0NI-unsplash.jpg); 
+         /* 1280x854 */
+      }
+   }
+   @media (min-width: 1280px) {
+      body {
+         background-image: url(img/thought-catalog-o0Qqw21-0NI-unsplash.jpg); 
+         /* 1860x1240 */
+      }
+   }
+
+ /* hero */
+
+.hero {
+   width: 400px;
+   height: auto;
+   margin: 20px  auto;
+   background-color: white;
+   padding-top: 32px;
+   text-align: center;
+   border-radius: 5%;
+   /* outline: 2px solid #000; */
+   box-shadow: 0 0 8px gray;
+ }
+ 
+ .hero p {
+   margin: 0 30px;
+ }
+ 
+ .hero img {
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+
+ .hero h1 {
+   margin: 0;
+ }
+ 
+
+
+/* copyright */
+
+.copyright {
+   background: #323435;
+   padding: 64px 0;
+   text-align: center;
+ }
+ 
+ .copyright small {
+   font-size: 16px;
+   color: #eee;
+ }
