@@ -29,7 +29,7 @@ a {
 /* header */
 
 header {
-  background: #3e260c;
+  background-image: url(img/mokume.jpg);
   margin: 20 auto;
   padding: 20px;
 }
@@ -49,19 +49,63 @@ header ul {
   display: flex;
 }
 
+/* nav */
+
+.nav li{
+  list-style:none;
+  width: 33%;
+  float:left;
+  font-family: 'Josefin Slab', serif;
+}
+
+
+.nav ul:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+
+*{box-sizing: border-box;}
+
+.nav ul{
+background-image: url(img/mokume.jpg);
+padding: 0;
+text-align: center;
+}
+
+.nav ul li {
+display: inline-block;
+}
+
+.nav ul li a{
+  display: block;
+  padding: 1em;
+  color: #fff;
+  text-decoration: none;
+  }
+
+.nav ul{
+  margin-top: 0; 
+  padding: 0;
+}
+
 /* main */
 
 main h1 {
-  font-size: 24px;
+  font-size: 25px;
   text-align: center;
   padding: 60px 0;
-
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
 }
 
 main h2 {
   font-size: 20px;
-  padding-top: 20px;
-  margin-bottom: 30px;
+  padding-top: 8px;
+  margin-bottom: 8px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
 }
 
 main .container {
@@ -79,7 +123,7 @@ main .container h2 {
 /* copyright */
 
 .copyright {
-   background: #;
+   background: ;
    padding: 64px 0;
    text-align: center;
    background: #3e260c;
