@@ -2,6 +2,7 @@
 /* body */
 
 body {
+  text-align: center;
   margin: 0;
   font-family: Arial, Helvetica, sans
 }
@@ -11,8 +12,11 @@ h2 {
   margin: 0;
   font-family: 'Josefin Slab', serif;
   text-align: center;
+  overflow: hidden;
+
 }
 h1 {
+  font-size: 22px;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -33,6 +37,7 @@ p + p {
 
 img {
   vertical-align: bottom;
+  max-width: 450px;
 }
 
 .container {
@@ -42,9 +47,11 @@ img {
 }
 /* header */
 header {
+  
   display: flex;
   padding: 0 16px;
   background-color: black;
+  margin-right: 0;
   margin-bottom: 30px;
 }
 
@@ -92,7 +99,7 @@ header h1 {
 .overlay #close {
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 35px;
   font-size: 32px;
   cursor: pointer;
 }
@@ -167,7 +174,6 @@ header h1 {
 
 /* main */
 
-
 /* screen */
 
 @media (min-width: 600px) {
@@ -185,6 +191,8 @@ header h1 {
 
 .features {
   padding: 32px 0;
+  overflow: hidden;
+
 }
 
 .features h1 {
@@ -193,7 +201,7 @@ header h1 {
 }
 
 .features .pic {
-  padding: 32px;
+  padding: 32px ;
 } 
 
 .features img {
