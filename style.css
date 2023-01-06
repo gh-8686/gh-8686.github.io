@@ -186,29 +186,13 @@ main img {
 /* screen */
 
 @media (min-width: 600px) {
-  
-  .hero .container {
-    display: flex;
-    align-items: center;
-  }
-
-  .hero .desc,
-  .hero .pic {
-    width: 50%;
-  }
-
-  .desc p{
-    margin-top: 10%;
-  }
-
-  .hero img {
-    width: calc(100% - 32px);
-    height: auto;
-    margin-top: 0;
-  }
 
   .features section {
     display: flex;
+  }
+
+  .features section:nth-child(odd) {
+    flex-direction: row-reverse;
   }
 }
 
