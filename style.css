@@ -167,21 +167,6 @@ header h1 {
 
 /* main */
 
-main img {
-  width: 100%;
-}
-
-
-
-
-.home img,
-.gout img {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  border: 10px solid black;
-  border-radius: 20px;
-}
 
 /* screen */
 
@@ -212,7 +197,7 @@ main img {
 } 
 
 .features img {
-  width: 100%;
+  width: 300px;
 }
 
 .features h2 {
