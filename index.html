@@ -1,49 +1,138 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>今まで読んだ本たち</title>
-  <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?    family=Josefin+Slab:ital,wght@1,100;1,700&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/favicon.jpg">
-</head>
-<body>
-  <header>
-    <div>
-      <h1>げんきの本棚</h1>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8">
+    <title>My Work - Portfolio</title>
+    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
 
-  <div class="nav">
-    <nav>
-    <ul>
-      <li><a href="index.html">自己紹介</a></li>
-      <li><a href="work.html">作品紹介</a></li>
-      <li><a href="3.html">色々❤</a></li>
-    </ul>
-    </nav>
-  </div>
-  <main>
-      
-      <h1>自己紹介</h1>
-      <div class="file">
-        <img src="img/icon.jpg" alt="icon">
+  <body>
+    <header id="header">
+      <h1 class="site-title"><a href="index.html">My Work</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img class="icon" src="img/insta.png" alt="インスタグラム">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="mainvisual">
+        <picture>
+           <img src="img/icon.jpg" alt="テキストテキストテキスト">
       </div>
 
-      <h2>genki<br>高校生</h2>
-      <p>げんきの、げんきによる、げんきのためのブログ<br>
-         自分の好きなことを好きなようにあげていけたらいいなと思います。
-      </p>
+      <section id="about" class="wrapper">
+        <h2 class="sec-title">About</h2>
+        <ul>
+          <li>鉢呂 元輝</li>
+          <li>tel: 000-0000-0000</li>
+          <li>url: gh-8686.github.io</li>
+          <li>mail: 8686gggg@gmail.com</li>
+        </ul>
+        <p>
+          高校生の18歳です。<br>
+          プログラマー見習いです。
+          このポートフォリオでは今までの作品にプラスして、自分が読んだ本のことも載せていきます。
+        </p>
+      </section>
+
+      <section id="works" class="wrapper">
+        <h2 class="sec-title">Work</h2>
+        <ul>
+          <li>
+            <a href="cafedemo.html">
+            <h1>cafe</h1>
+            <img src="cafe/cafemain.avif" alt="cafedemo">
+            </a>
+          </li>
+          <li>
+            <a href="cafedemo.html">
+            <h1>cafe</h1>
+            <img src="cafe/cafemain.avif" alt="cafedemo">
+            </a>
+          </li>
+          <li>
+            <a href="cafedemo.html">
+            <h1>cafe</h1>
+            <img src="cafe/cafemain.avif" alt="cafedemo">
+            </a>
+          </li>
+          <li>
+            <a href="cafedemo.html">
+            <h1>cafe</h1>
+            <img src="cafe/cafemain.avif" alt="cafedemo">
+            </a>
+          </li>
+          <li>
+            <a href="cafedemo.html">
+            <h1>cafe</h1>
+            <img src="cafe/cafemain.avif" alt="cafedemo">
+            </a>
+          </li>
+          <li>
+            <a href="cafedemo.html">
+            <h1>cafe</h1>
+            <img src="cafe/cafemain.avif" alt="cafedemo">
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="news" class="wrapper">
+        <h2 class="sec-title">Book</h2>
+        <dl>
+          <a href="book1.html">
+            <dt>アイドル2.0</dt>
+            <dd>自分が好きなコムドットやまとさんのビジネス書です。
+            </dd>
+            </a>
+          <a href="book2.html">
+            <dt>経営12か条</dt>
+            <dd>稲森和夫さんの経営書。様々な企業の経営に携わった経験の集大成。
+            </dd>
+            </a>
+          <a href="book3.html">
+            <dt>メンタルが強い人がやめた13の習慣</dt>
+            <dd>精神科医である著者エイミー・モンローさんの体験談。
+              様々な視点からあらゆる悩みに対して解決する。
+            </dd>
+            </a>
+        </dl>
+      </section>
+
+      <section id="contact" class="wrapper">
+        <h2 class="sec-title">Contact</h2>
+        <form action="#" method="post">
+          <dl>
+            <dt><label for="name">NAME</label></dt>
+            <dd><input type="text" id="name" name="your-name"></dd>
+            <dt><label for="email">E-mail</label></dt>
+            <dd><input type="email" id="email" name="your-email"></dd>
+            <dt><label for="message">MESSAGE</label></dt>
+            <dd><textarea id="message" name="your-message"></textarea></dd>
+          </dl>
+          <div class="button"><input type="submit" value="送信"></div>
+        </form>
+      </section>
     </main>
 
-    <footer class="copyright">
-      <small>(c) trtr.com</small>
+    <footer id="footer">
+      <p>&copy; 2020 My Work</p>
     </footer>
 
-</body>
+  </body>
+
 </html>

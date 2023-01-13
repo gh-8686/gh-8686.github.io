@@ -1,151 +1,256 @@
-/* common */
+@charset "UTF-8";
 
+html {
+  font-size: 100%;
+}
 body {
-  margin: 0;
+  color: #24292e;
 }
-
-h1,
-h2,
-p {
-  /* margin: 0; */
-
-}
-
-h1,
-h2 {
-  font-weight: normal;
-}
-
-.container {
-  margin: 0 auto;
-  text-align: center;
-}
-
 a {
   text-decoration: none;
-  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
 }
 
-
-/* header */
-
-header {
-  background-image: url(img/mokume.jpg);
-  margin: 0 auto;
-  padding: 20px;
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9rem;
+  padding: 0 4%;
 }
-
-
-header h1 {
-  color: #eee;
-  font-size: 24px;
-  text-align: center;
-  font-family: 'Josefin Slab', serif;
+.site-title {
+  line-height: 1px;
+  padding: 10px;
 }
-
-
-/* nav */
-.nav li{
-  list-style:none;
-  width: 33%;
-  float:left;
-  font-family:"Sawarabi Mincho";
-}
-
-
-.nav ul:after{
-  content:"";
-  display:block;
-  clear:both;
-}
-
-
-*{box-sizing: border-box;}
-
-.nav ul{
-background-image: url(img/mokume.jpg);
-padding: 0;
-text-align: center;
-}
-
-.nav ul li {
-display: inline-block;
-}
-
-.nav ul li a{
+.site-title a {
   display: block;
-  padding: 1em;
-  color: #fff;
-  text-decoration: none;
-  }
-
-.nav ul{
-  margin-top: 0; 
-  padding: 0;
 }
-
-
-/* main */
-
-
-main {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  max-width: 500px;
+.sec-title {
+  font-size: 1.5rem;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  margin-bottom: 65px;
 }
 
-main h1 {
-  margin-top: 40px;
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 270px;
   margin: 0 auto;
-  font-size: 25px;
-  
-  padding: 60px 0;
-  font-family: 'Josefin Slab', serif;
-  font-weight: bold;
+  padding: 0 4%;
+}
+#header ul {
+  display: flex;
+  padding: 10px 0;
+}
+#header li {
+  font-size: 0.9rem;
+  margin-left: 30px;
+}
+#header li a {
+  color: #24292e;
+}
+#header li a:hover {
+  opacity: 0.7;
+}
+#header li img.icon {
+  width: 20px;
 }
 
-main h2 {
-  font-size: 20px;
-  padding-top: 8px;
-  margin-bottom: 8px;
-  font-family: 'Josefin Slab', serif;
-  font-weight: bold;
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+
+
+#mainvisual {
+  margin-bottom: 80px;
+  text-align: center;
+}
+#mainvisual img {
+  border-radius: 50%;
+  /* width: 100%; */
+  max-width: 1920px;
+  height: 420px;
+  object-fit: cover;
 }
 
-main p {
-  font-family: 'Josefin Slab', serif;
-  font-weight: bold;
-  
-}
-
-main .container {
-  box-shadow: 4px 4px 4px 4px gray;
-  max-width: 300px;
-  height: auto;
-  border-radius: 30px;
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about ul {
   margin-bottom: 30px;
 }
+#about li:first-child {
+  margin-bottom: 30px;
+}
+#about p {
+  text-align:justify;
+}
 
-.file img {
-  max-width: 250px;
-  border: 2px solid black;
-  border-radius: 50%;
-  box-shadow: 4px 4px 4px 4px gray;
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+#works a:hover{
+  opacity: 0.5;
+}
+#works ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+#works li {
+  width: 31%;
+  margin-bottom: 23px;
+}
+
+/*-------------------------------------------
+News
+-------------------------------------------*/
+#news a {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#news dl {
+  border-top: solid 1px #c8c8c8;
+  margin-bottom: 20px;
+}
+#news dt {
+  width: 20%;
+  border-bottom: solid 1px #c8c8c8;
+  padding: 15px;
+}
+#news dd {
+  width: 80%;
+  border-bottom: solid 1px #c8c8c8;
+  padding: 15px;
+}
+
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
+#contact dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+#contact dt {
+  width: 15%;
+}
+#contact dd {
+  width: 85%;
+  margin-bottom: 10px;
+}
+#contact dd input,
+#contact dd textarea {
+  width: 100%;
+  border: solid 1px #c8c8c8;
+  padding: 10px;
+}
+#contact dd textarea {
+  height: 10rem;
+}
+#contact .button {
+  text-align: center;
+}
+#contact .button input {
+  width: 200px;
+  background-color: #24292e;
+  color: #fff;
+  padding: 15px 0;
+  border: solid 1px #24292e;
+}
+#contact .button input:hover {
+  background: #fff;
+  color: #24292e;
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+#footer {
+  background-color: #24292e;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 10px 20px;
   text-align: center;
 }
 
-/* copyright */
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin-bottom: 70px;
+  }
+  .site-title {
+    margin-top: 20px;
+  }
+  .sec-title {
+    margin-bottom: 40px;
+  }
 
-.copyright {
-   padding: 64px 0;
-   text-align: center;
-   background: #3e260c;
- }
- 
- .copyright small {
-   font-size: 16px;
-   color: #eee;
- }
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  #header {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  #header li {
+    font-size: 0.8rem;
+    margin-left: 20px;
+  }
+  #header li:first-child {
+    margin-left: 0;
+  }
+
+  /*-------------------------------------------
+  Works
+  -------------------------------------------*/
+  #works ul {
+    flex-direction: column;
+  }
+  #works li {
+    width: 100%;
+  }
+
+  /*-------------------------------------------
+  News
+  -------------------------------------------*/
+  #news dl {
+    flex-direction: column;
+  }
+  #news dt {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  #news dd {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  /*-------------------------------------------
+  Contact
+  -------------------------------------------*/
+  #contact dl {
+    flex-direction: column;
+  }
+  #contact dt {
+    width: 100%;
+  }
+  #contact dd {
+    width: 100%;
+  }
+}
