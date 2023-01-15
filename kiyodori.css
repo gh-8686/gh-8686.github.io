@@ -336,7 +336,7 @@ SP
   .fixed-bg {
     height: 94px;
     /* スマホ時は背景をスクロールするように変更 */
-    /* background-attachment: scroll; */
+    background-attachment: scroll;
   }
   .wrapper {
     padding: 30px 16px 60px 16px;
