@@ -111,6 +111,11 @@ Works
   width: 31%;
   margin-bottom: 23px;
 }
+#works img {
+  width: 100%;
+}
+
+
 
 /*-------------------------------------------
 News
@@ -219,10 +224,12 @@ SP
   Works
   -------------------------------------------*/
   #works ul {
-    flex-direction: column;
+    display: flex;
+    /* flex-direction: column; */
   }
   #works li {
-    width: 100%;
+    width: 45%;
+    /* margin: px; */
   }
 
   /*-------------------------------------------

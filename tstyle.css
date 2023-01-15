@@ -1,0 +1,314 @@
+@charset "UTF-8";
+/* body */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+  text-align: center;
+  overflow: hidden;
+
+}
+h1 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+p {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: bold;
+  font-family:'Josefin Slab', serif;
+  line-height: 1.6;
+}
+
+p + p {
+  margin-top: 16px;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.container {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  max-width: 800px;
+
+}
+/* header */
+header {
+  display: flex;
+  padding: 0 16px;
+  background-color: black;
+  margin-right: 0;
+  /* margin-bottom: 30px; */
+}
+
+header h1 {
+  margin: 0;   
+  font-size: 22px;
+  line-height: 64px;
+  color: white;
+}
+
+.sp-menu {
+  margin-left: auto;
+  color: white;
+}
+
+.sp-menu #open {
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(225, 225, 225, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 35px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+  opacity: 0;
+  transform:translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay li a{
+  font-size: 25px;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.pc-menu {
+  display: none;
+}
+
+@media (min-width: 600px) {
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  .pc-menu {
+    display: block;
+    margin-left: auto; 
+  }
+  
+  .pc-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .pc-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 80px;
+    line-height: 64px;
+    text-align: center;
+  }
+
+  .pc-menu a:hover {
+    background: #f2f2f2;
+  }
+
+}
+
+
+/* main */
+
+.intro {
+  padding: 20px 0;
+  background-image: url(timg/backwhite.jpg);
+}
+
+.home p {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 60px;
+}
+
+
+/* screen */
+
+@media (min-width: 700px) {
+
+ .features p {
+  padding-top: 50px;
+ }
+
+  .features section {
+    display: flex;
+  }
+
+  .features section:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+
+/* features */
+
+.features {
+  padding: 32px 0;
+  margin: 32px 25px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  /* max-width: 1000cpx; */
+  align-items: center;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+}
+
+/* .features:hover { */
+  /* opacity: .5; */
+/* } */
+
+.features h1 {
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.features p {
+  margin-top: 0;
+}
+
+.features .pic {
+  padding: 32px ;
+} 
+
+.features img {
+  width: 100%;
+}
+
+.features h2 {
+  padding-bottom: 16px;
+}
+
+.features section + section {
+  margin-top: 0px;
+}
+
+/* menu */
+
+/* tabmenu */
+
+.menucontainer {
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li a {
+  display: inline-block;
+  width: 100px;
+  padding: 8px 0;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.menu li a.active {
+  background: #333;
+  color: #fff;
+}
+
+.menu li a:not(.active):hover {
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+.content.active {
+  background: #333;
+  color: #fff;
+  display: block;
+  min-height: 150px;
+  padding: 30px 14px;
+}
+
+.content {
+  display: none;
+}
+
+
+/* footer */
+
+.copyright {
+  background: black;
+  margin-top: 30px;
+  padding: 32px 0;
+  text-align: center;
+}
+  
+.copyright small {
+  font-size: 16px;
+  color: #eee;
+  font-family: 'Josefin Slab', serif;
+}
