@@ -22,11 +22,11 @@
     margin-bottom :25px;
   }
   .item-title2 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin-bottom :25px;
   }
   .item-title3 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin-bottom :5px;
   }
   .fixed-bg {
@@ -46,8 +46,8 @@ fee
 
   table {
     border: 0;
-    width: 70%;
-    margin-left: 15%;
+    width: 90%;
+    margin-left: 5%;
   }
   table th{
     background-color: #eee;
@@ -105,16 +105,20 @@ fee
     
   }
   #about li{
-    width: 70%;
-    margin-left: 15%;
+    width: 90%;
+    margin-left: 5%;
     font-size: 1.25em;
   }
   /*-------------------------------------------
   container
   -------------------------------------------*/
+  #flex-container {
+    width: 90%;
+    margin-left: 5%;
+  }
   .container {
-    width: 46%;
-    margin-left: 5px;
+    width: 42%;
+    margin-left: 5.33%;
   }
   .container h2 {
     font-size: 1.25em;
