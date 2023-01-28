@@ -5,6 +5,8 @@ html {
   font-size: 100%;
 }
 body {
+  margin: 0;
+  
   font-family:serif;
   font-size: 0.9rem;
   line-height: 1.7;
@@ -67,17 +69,25 @@ display: inline-block;
 }
 .item-title1 {
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   display: inline-block;
   text-align: left;
   border-bottom: dotted 6px #e03131;
   /* margin-bottom: 30px; */
 }
-/*
-「background-attachment: fixed;」で背景を固定する
-※background-attachment: fixed;とbackground-size: cover;
-を同時に使用した場合、iOSでは正しく動作しない
-*/
+.item-title2 {
+  width: 100%;
+  font-size: 1.5rem;
+  display: inline-block;
+  border-bottom: dotted 6px #e03131;
+  margin-bottom: 30px;
+}
+.item-title3 {
+  width: 100%;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 10px;
+}
 .fixed-bg {
   height: 300px;
   background-attachment: fixed;
@@ -109,12 +119,14 @@ background～プロパティでメインビジュアルの表示方法を設定
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  padding: 20px 40px;
+  /* padding: 20px 40px; */
   position: relative;
 }
 nav ul {
   display: flex;
   justify-content: flex-end;
+  padding-top: 15px;
+  margin-right: 30px;
 }
 nav li {
   margin-left: 30px;
@@ -128,6 +140,53 @@ nav li a {
 nav li a:hover {
   color: #e03131;
 }
+
+/* ------------------------------------------
+fee
+-------------------------------------------*/
+
+#fee {
+  margin-top :20px;  
+}
+#fee .fee-img {
+  background-image: url(simg/fee.jpg);
+  position: relative;
+}
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 40px;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  padding: 1.35em;
+}
+table th,
+table td {
+  padding: 1em 10px 1em 1em;
+  border-right: 1px solid #bbb;
+}
+table th {
+  font-size: 1.5em;
+}
+table thead tr{
+  background-color: #eee;
+}
+.txt{
+   text-align: left;
+   font-size: 1.3em;
+}
+.price{
+   text-align: right;
+   font-size: 1.3em;
+}
+
 
 /*-------------------------------------------
 step
@@ -165,6 +224,7 @@ step
 About
 -------------------------------------------*/
 #about {
+  width: 100%;
   margin-top: 20px;
 }
 #about .about-img {
@@ -178,12 +238,57 @@ About
   margin-bottom: 40px;
 }
 #about li {
-  width: 50%;
+  width:70%;
+  margin-left: 15%;
   line-height: 2;
   text-align: left;
   padding: 2%;
+  font-size: 1.5em;
 }
-#about .btn {
+
+/* ----------------------------------
+container
+---------------------------------- */
+
+#big-container h2 {
+  text-align: center;
+}
+#flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-left: 15%;
+}
+.container {
+  box-shadow: 0 0 8px gray;
+  border-radius: 20px;
+  width: 22%;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.container img {
+  margin-top: 15px;
+  width: 70%;
+  margin-left: 15%; 
+  padding-top: 10px;
+}
+ .container h2 {
+  /* margin-top: 30px; */
+ }
+.container p {
+  color: #000;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+}
+
+
+.div-btn {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.btn {
   width: 160px;
   height: 50px;
   line-height: 3.5;
@@ -194,20 +299,15 @@ About
   transition: all 0.3s ease;
   position: relative;
 }
-#about .btn span {
+.btn span {
+  text-align: center;
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
-/*
-.btn::before 右の赤線
-.btn::after 下の赤線
-.btn span::before 左の赤線
-.btn span::after 上の赤線
-*/
-#about .btn::before,
-#about .btn::after {
+.btn::before,
+.btn::after {
   position: absolute;
   content: "";
   right: 0;
@@ -215,8 +315,8 @@ About
   background: #e03131;
   transition: all 0.3s ease;
 }
-#about .btn span::before,
-#about .btn span::after {
+ .btn span::before,
+ .btn span::after {
   position: absolute;
   content: "";
   left: 0;
@@ -224,13 +324,13 @@ About
   background: #e03131;
   transition: all 0.3s ease;
 }
-#about .btn::before,
-#about .btn span::before {
+.btn::before,
+.btn span::before {
   width: 2px;
   height: 50%;
 }
-#about .btn::after,
-#about .btn span::after {
+.btn::after,
+.btn span::after {
   width: 20%;
   height: 2px;
 }
@@ -238,18 +338,19 @@ About
 ホバー時の縦の動作
 右の赤線と左の赤線の高さを100%にする
 */
-#about .btn:hover::before,
-#about .btn span:hover::before {
+.btn:hover::before,
+.btn span:hover::before {
   height: 100%;
 }
 /*
 ホバー時の横の動作
 下の赤線と上の赤線の横幅を100%にする
 */
-#about .btn:hover::after,
-#about .btn span:hover::after {
+.btn:hover::after,
+.btn span:hover::after {
   width: 100%;
 }
+
 
 /*-------------------------------------------
 Location
@@ -288,63 +389,3 @@ Location
   text-align: center;
 }
 
-/*-------------------------------------------
-SP
--------------------------------------------*/
-@media screen and (max-width: 767px) {
-  .site-title {
-    top: 42%;
-  }
-  .sec-title {
-    font-size: 2rem;
-    top: 26%;
-  }
-  .item-title {
-    font-size: 1.25rem;
-    margin-bottom :25px;
-  }
-  .fixed-bg {
-    height: 94px;
-    /* スマホ時は背景をスクロールするように変更 */
-    background-attachment: scroll;
-  }
-  .wrapper {
-    padding: 30px 16px 60px 16px;
-  }
-  #menu {
-    margin-top: 10px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /*-------------------------------------------
-  About
-  -------------------------------------------*/
-  #about ul {
-    flex-direction: column;
-  }
-  #about li {
-    width: 100%;
-  }
-}

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 767px) {
+
+
+  h2 {
+
+  }
+  .site-title {
+    top: 42%;
+  }
+  .sec-title {
+    font-size: 2rem;
+    top: 20%;
+  }
+  .item-title {
+    font-size: 1.25rem;
+    margin-bottom :25px;
+  }
+  .item-title1 {
+    font-size: 1.25rem;
+    margin-bottom :25px;
+  }
+  .item-title2 {
+    font-size: 1.15rem;
+    margin-bottom :25px;
+  }
+  .item-title3 {
+    font-size: 1.15rem;
+    margin-bottom :5px;
+  }
+  .fixed-bg {
+    height: 94px;
+    /* スマホ時は背景をスクロールするように変更 */
+    background-attachment: scroll;
+  }
+  .wrapper {
+    padding: 30px 16px 60px 16px;
+  }
+  #menu {
+    margin-top: 10px;
+  }
+/* ---------------------------------
+fee
+----------------------------------- */
+
+  table {
+    border: 0;
+    width: 70%;
+    margin-left: 15%;
+  }
+  table th{
+    background-color: #eee;
+    display: block;
+    border-right: none;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #bbb;
+    display: block;
+    font-size: 1.25em;
+    text-align: right;
+    position: relative;
+    padding: .625em .625em .625em 4em;
+    border-right: none;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+  .txt{
+    font-size: 1em;
+ }
+ .price{
+    font-size: 1em;
+ }
+
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  #about ul {
+    flex-direction: column;
+    
+  }
+  #about li{
+    width: 70%;
+    margin-left: 15%;
+    font-size: 1.25em;
+  }
+  /*-------------------------------------------
+  container
+  -------------------------------------------*/
+  .container {
+    width: 46%;
+    margin-left: 5px;
+  }
+  .container h2 {
+    font-size: 1.25em;
+    padding: 2px;
+  }
+
+}
