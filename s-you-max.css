@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 767px) {
+	.nav-wrap {
+  position: relative;
+}
+.scroll-nav {
+  width: 100%;
+  background: #555;
+  /* メニューの背景色 */
+  overflow-x: auto;
+  /* 慣性スクロール */
+  -webkit-overflow-scrolling: touch;
+ 
+}
+.scroll-nav ul {
+  max-width: 100%; /* メニューの最大幅 */
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  list-style: none;
+  padding-right: 25px; /* 右側の固定分余白を空ける */
+}
+.scroll-nav ul li {
+  float: left;
+  width: 14%; /* メニューの個別の幅 */
+  text-align: center;
+}
+.scroll-nav ul li:hover {
+  background: #222; /*マウスホバー時の背景色*/
+}
+.scroll-nav ul li a {
+  display: inline-block;
+  color: #fff; /* メニューの文字色 */
+  text-decoration: none;
+}
+
+.pc-menu,
+.sp-menu,
+.overlay {
+  display: none;
+}
+
+.div-bottom-menu {
+  display: none;
+}
+}

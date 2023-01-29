@@ -10,28 +10,58 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="s-you.css">
 		<link rel="stylesheet" href="s-you-min.css">
+		<link rel="stylesheet" href="s-you-max.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 
 	</head>
 
   <body>
     <header id="header">
-      <nav>
+      <div class="nav-wrap">
+				<div class="scroll-nav"> 
         <ul>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#fee">FEE</a></li>
           <li><a href="#menu">MENU</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#fee">FEE</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#about">ABOUT</a></li>
         </ul>
-      </nav>
+        </div>
+			</div>
+
+			<div class="pc-menu">
+				<nav>
+					<ul>
+						<li><a href="cafe.html">home</a></li>
+						<li><a href="menu.html">menu</a></li>
+						<li><a href="info.html">info</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="sp-menu">
+				<span class="material-icons" id="open">menu</span>
+			</div>
+
       <h1 class="site-title">S-you</h1>
 			<h1 class="site-title2">日本で一番安い<wbr>ホームページ制作</h1>
     </header>
 
+		<div class="overlay">
+			<span class="material-icons" id="close">close</span>
+			<nav>
+				<ul>
+					<li><a href="cafe.html">home</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="info.html">info</a></li>
+				</ul>
+			</nav>
+		</div>
+
     <main>
-
-
-
-		
-
 			<section id="about">
 				<div class="about-img fixed-bg">
 					<h2 class="sec-title">製作費無料!!</h2>
@@ -45,22 +75,6 @@
 							<li>
 							  従来のホームページ制作会社なら簡易的なものでも5～10万円は
 								製作費としてかかってきます。そして、高額なものでは30万円のものも…
-								<img src="simg/office.jpg">
-							</li>
-							<li>
-								テキストテキストテキストテキストテキストテキストテキストテキスト
-								テキストテキストテキストテキストテキストテキストテキストテキスト
-								<img src="simg/office.jpg">
-							</li>
-							<li>
-								テキストテキストテキストテキストテキストテキストテキストテキスト
-								テキストテキストテキストテキストテキストテキストテキストテキスト
-								<img src="simg/office.jpg">
-							</li>
-							<li>
-								テキストテキストテキストテキストテキストテキストテキストテキスト
-								テキストテキストテキストテキストテキストテキストテキストテキスト
-								<img src="simg/office.jpg">
 							</li>
 						</ul>
 					</div>
@@ -226,6 +240,23 @@
       <p>&copy; S-you</p>
     </footer>
 
-		<script src="js/main.js"></script>
+		<div class="div-bottom-menu">
+			<ul class="bottom-menu">
+				<li>
+					<a href="#">
+						<span class="iconname">
+							DMでお問い合わせ
+						</span></a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="iconname">
+							メールでお問い合わせ
+						</span></a>
+				</li>
+			</ul>
+			</div>
+
+		<script src="syou/syou.js"></script>
   </body>
 </html>
