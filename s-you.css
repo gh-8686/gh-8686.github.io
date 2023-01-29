@@ -368,4 +368,18 @@ Location
   padding: 10px 0;
   text-align: center;
 }
+/*-------------------------------------------
+bootstrap
+-------------------------------------------*/
+
+#to_top {
+  position: fixed;
+  bottom: 65px;
+  right: 16px;
+}
+
+#to_top i {
+  font-size: 32px;
+  color: #000;
+}
 
