@@ -170,9 +170,12 @@ content
   line-height: 1;
 }
 .content .left .title .sub {
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: block;
   margin-bottom: 20px;
+}
+.content .left .copy {
+  font-size: 0.756rem;
 }
 .content .left .text-area {
   position: static;
