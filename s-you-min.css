@@ -141,20 +141,44 @@ header
 /* ---------------------------------
 content
 ------------------------------------ */
-.content .left {
-  width: 58%;
-}
-.content .left .title .center {
-  font-size: 2.5rem;
-}
-.content .left .title .sub {
-  font-size: 1rem;
-}
-.content .right {
-  width: 42%;
-}
-.content .right .big {
+.content {
   display: none;
+}
+
+#mv {
+  position: relative;
+  display: inline-block;
+}
+#mv .second-container {
+  width: 80%;
+  height: 100vh;
+  margin-left: auto;
+}
+.second-container img {
+  width: 100%;
+  height: 80vh;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+#mv .text {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+}
+#mv .title {
+  line-height: 1;
+  margin-top: 56px;
+  margin-bottom: 28px;
+}
+#mv .title .center {
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+#mv .title .sub {
+  display: block;
+  font-size: 1.5rem;
 }
 /* ---------------------------------
 fee
