@@ -124,7 +124,7 @@ content
 }
 .content .left::before {
   content:"";
-  width: 200px;
+  width: 300px;
   height: 100vh;
   background: #fff;
   position: absolute;
@@ -134,7 +134,7 @@ content
 .content .left .text-area {
   position: absolute;
   top: 60px;
-  left: 60px;
+  left: 30px;
 }
 .content .left .title {
   line-height: 1;
