@@ -4,11 +4,12 @@
 html {
   font-size: 100%;
 }
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
 body {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.7;
-  font-family;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 a {
   text-decoration: none;
@@ -104,23 +105,8 @@ display: inline-block;
 }
 
 /*-------------------------------------------
-ヘッダー
+content
 -------------------------------------------*/
-/*
-min-height: 100vh;
-メインビジュアルを画面の高さにあわせる
-background～プロパティでメインビジュアルの表示方法を設定
-*/
-#header {
-  width: 100%;
-  min-height: 100vh;
-  background-image: url(simg/home.jpg);
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  /* padding: 20px 40px; */
-  position: relative;
-}
 /* ------------------------------------------
 fee
 -------------------------------------------*/
@@ -205,7 +191,6 @@ About
 -------------------------------------------*/
 #about {
   width: 100%;
-  margin-top: 20px;
 }
 #about .about-img {
   background-image: url(simg/office.jpg);

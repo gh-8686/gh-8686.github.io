@@ -41,23 +41,29 @@
 header
 ------------------------------------*/
 
+#header2 {
+  display: flex;
+  padding: 0 16px;
+  background:none;
+  margin-right: 0;
+  /* margin-bottom: 30px; */
+}
+
+#header2 h1 {
+  margin: 0;   
+  font-size: 22px;
+  line-height: 64px;
+  color: #000;
+}
 .sp-menu {
-  /* margin-left: auto; */
-  color: white;
-  background-color: #555;
-  position: fixed;
-  top:0;
-  right: 0;
-  left: 0;
-  z-index: 1;
+  margin-left: auto;
+  color: #000;
 }
 
 .sp-menu #open {
   font-size: 32px;
   line-height: 64px;
   cursor: pointer;
-  margin-left: 90%;
-  
 }
 
 .sp-menu #open.hide {
@@ -128,7 +134,50 @@ header
 .pc-menu {
   display: none;
 }
-.nav-wrap {
+#header {
+  display: none;
+}
+
+/* ---------------------------------
+content
+------------------------------------ */
+
+.content {
+  display: flex;
+}
+.content .copy {
+  word-break: keep-all;
+}
+.content .left {
+  width: 100%;
+  height: 80vh;
+  padding: 0 16px;
+}
+.content .left::before {
+  content:"";
+  width: 320px;
+  height: 80%;
+  background: #000;
+  position: absolute;
+  right: -170px;
+  transform:skewX(-18deg);
+}
+.content .left .title .center {
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  line-height: 1;
+}
+.content .left .title .sub {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 20px;
+}
+.content .left .text-area {
+  position: static;
+}
+.content .right {
   display: none;
 }
 /* ---------------------------------
