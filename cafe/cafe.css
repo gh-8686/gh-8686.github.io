@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#hero {
+  background-color: #f2f2f2;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#hero h2 {
+  margin: 0;
+  font-size: 48px;
+}
+
+#hero p {
+  margin: 20px 0 0;
+}
+
+#menu {
+  background-color:#fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#menu h2 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.menu-item {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-item h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.menu-item p {
+  margin: 20px 0;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#reservations {
+  background-color: #f2f2f2;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#reservations h2 {
+  margin: 0;
+  font-size: 36px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="time"], input[type="submit"] {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
