@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>カロリー計算機</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 40px;
+			font-size: 36px;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 40px;
+			font-size: 24px;
+			font-weight: bold;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.input-group {
+			display: flex;
+			flex-direction: column;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			flex-basis: 250px;
+		}
+
+		.input-group:last-child {
+			margin-right: 0;
+		}
+
+		label {
+			margin-bottom: 10px;
+			font-size: 24px;
+			font-weight: bold;
+		}
+
+		input[type="text"], select {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #f0f0f0;
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		select {
+			appearance: none;
+			-webkit-appearance: none;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' fill='none'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: right 10px center;
+			background-size: 10px 6px;
+		}
+
+		button {
+			display: block;
+			margin: 0 auto;
+			padding: 10px 20px;
+			border: none;
+			background-color: #4CAF50;
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+
+		#result {
+			margin-top: 40px;
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		table {
+			margin-top: 40px;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th, td {
+			text-align: left;
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+			font-size: 24px;
+		}
+
+		th {
+			background-color: #4CAF50;
+			color: white;
+			font-weight: bold;
+		}
+
+		/* スマホ用のCSS */
+@media screen and (max-width: 767px) {
+  /* フォームのスタイル */
+  .input-group {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  label {
+    font-size: 1.2rem;
+  }
+  input {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  /* 追加ボタンのスタイル */
+  button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  /* 表のスタイル */
+  #table {
+    width: 100%;
+  }
+  th, td {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  /* 合計カロリーのスタイル */
+  #result {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+
+
+	</style>
+</head>
+<body>
+	<h1>カロリー計算機</h1>
+	<div class="container">
+    <form>
+        <div class="input-group">
+            <label for="food">食べ物</label>
+            <input type="text" id="food" name="food" placeholder="例：ごはん、サラダ、ステーキ">
+        </div>
+        <div class="input-group">
+            <label for="calories">カロリー</label>
+            <input type="text" id="calories" name="calories" placeholder="例：200">
+        </div>
+        <button type="button" onclick="addRow()">追加</button>
+    </form>
+    <div id="result"></div>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>食べ物</th>
+                <th>カロリー</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<button onclick="takeScreenshot()">スクリーンショットを撮る</button>
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script>
+    function addRow() {
+        var food = document.getElementById("food").value;
+        var calories = document.getElementById("calories").value;
+        if (food === "" || calories === "") {
+            alert("食べ物とカロリーを入力してください。");
+            return;
+        }
+        var table = document.getElementById("table");
+        var row = table.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = food;
+        cell2.innerHTML = calories;
+        document.getElementById("food").value = "";
+        document.getElementById("calories").value = "";
+        updateTotalCalories();
+    }
+
+    function updateTotalCalories() {
+        var totalCalories = 0;
+        var table = document.getElementById("table");
+        for (var i = 1; i < table.rows.length; i++) {
+            totalCalories += parseInt(table.rows[i].cells[1].innerHTML);
+        }
+        document.getElementById("result").innerHTML = "合計カロリー：" + totalCalories + " kcal";
+    }
+
+    function takeScreenshot() {
+			html2canvas(document.body).then(function(canvas) {
+				var link = document.createElement("a");
+				document.body.appendChild(link);
+				link.download = "screenshot.png";
+				link.href = canvas.toDataURL("image/png");
+				link.target = '_blank';
+				link.click();
+			});
+		}
+</script>
+</body>
+</html>
