@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ダイエット計算機</title>
+	<link rel="stylesheet" href="diet.css">
+</head>
+<body>
+	<div class="container">
+		<h1>ダイエット<wbr>計算機</h1>
+		<form>
+			<div class="form-group">
+				<label for="weight">体重（kg）</label>
+				<input type="number" id="weight" placeholder="体重を入力してください" required>
+			</div>
+			<div class="form-group">
+				<label for="height">身長（cm）</label>
+				<input type="number" id="height" placeholder="身長を入力してください" required>
+			</div>
+			<div class="form-group">
+				<label for="age">年齢</label>
+				<input type="number" id="age" placeholder="年齢を入力してください" required>
+			</div>
+			<div class="form-group">
+				<label for="gender">性別</label>
+				<select id="gender" required>
+					<option value="">選択してください</option>
+					<option value="male">男性</option>
+					<option value="female">女性</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="activity-level">運動レベル</label>
+				<select id="activity-level" required>
+					<option value="">選択してください</option>
+					<option value="1.2">ほとんど運動しない</option>
+					<option value="1.375">週に1～3回軽い運動をする</option>
+					<option value="1.55">週に3～5回中程度の運動をする</option>
+					<option value="1.725">週に6～7回激しい運動をする</option>
+					<option value="1.9">毎日非常に激しい運動をする</option>
+				</select>
+			</div>
+			<button type="button" id="calculate-button">計算する</button>
+		</form>
+		<div id="result"></div>
+		<a href="caroly.html">
+		<button type="button" id="calculate-button">カロリー計算</button>
+	    </a>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
